@@ -2,9 +2,9 @@
 Configuration ArchiveDemo {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
     Archive ArchiveDemo {
-        Path = "C:\demoscripts\Scripts.zip"
+        Path        = "C:\demoscripts\Scripts.zip"
         Destination = "C:\Scripts"
-        Ensure="Present"
+        Ensure      = "Present"
     }
 }
 
@@ -16,9 +16,9 @@ Configuration ArchiveDemo {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
     Node @('S16-01','S12R2-01') {
         Archive ArchiveDemo {
-            Path = "C:\demoscripts\Scripts.zip"
+            Path        = "C:\demoscripts\Scripts.zip"
             Destination = "C:\Scripts"
-            Ensure="Present"
+            Ensure      = "Present"
         }
     }
 }

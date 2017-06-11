@@ -1,14 +1,17 @@
 
-#Download ZIP File
+#Go to www.github.com
+#Search for "outek" , switch to users
+
+#download zip file
 https://github.com/Outek/Schulung
 
-#Install Chocolatey
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+#install chocolatey
+Invoke-WebRequest ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-#Install vscode, vscode_powershell, Chrome, git
-choco install visualstudiocode git googlechrome -y
+#install vscode, vscode_powershell extension for vscode, chrome, git
+choco install visualstudiocode git googlechrome vscode-powershell -y
 
 #Install Dsc Modules
-Find-modules -Name *DSC*
+Install-Module -Name 
 
 Install-Module -Name pdsc

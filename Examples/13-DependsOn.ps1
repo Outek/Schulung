@@ -32,20 +32,20 @@ Configuration DependsDemo
     {
         group groupDemo
         {
-            GroupName = 'TestGroup'
-            Members = $Credential.UserName
-            DependsOn = '[User]UserDemo'
+            GroupName   = 'TestGroup'
+            Members     = $Credential.UserName
+            DependsOn   = '[User]UserDemo'
         }
                 
         User UserDemo
         {
-            UserName = $Credential.UserName
-            Password = $Credential
-            Description = "local account"
-            Ensure = "Present"
-            Disabled = $false
-            PasswordNeverExpires = $true
-            PasswordChangeRequired = $false
+            UserName                = $Credential.UserName
+            Password                = $Credential
+            Description             = "local account"
+            Ensure                  = "Present"
+            Disabled                = $false
+            PasswordNeverExpires    = $true
+            PasswordChangeRequired  = $false
         }
     }
 }

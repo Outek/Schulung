@@ -1,9 +1,9 @@
 ﻿Configuration ArchiveDemo {
     Node localhost {
         Archive ArchiveDemo {
-            Path = "C:\demoscripts\Scripts.zip"
+            Path        = "C:\demoscripts\Scripts.zip"
             Destination = "C:\Scripts"
-            Ensure="Present"
+            Ensure      = "Present"
         }
     }
 }
@@ -21,9 +21,9 @@ psEdit C:\DemoScripts\Archivedemo\localhost.mof
 Configuration ArchiveDemo {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
     Archive ArchiveDemo {
-        Path = "C:\demoscripts\Scripts.zip"
+        Path        = "C:\demoscripts\Scripts.zip"
         Destination = "C:\Scripts"
-        Ensure="Present"
+        Ensure      = "Present"
     }
 }
 ArchiveDemo -OutputPath C:\DemoScripts\Archivedemo
@@ -35,9 +35,9 @@ Configuration ArchiveDemo {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
     Node @('S16-01','S12R2-01') {
         Archive ArchiveDemo {
-            Path = "C:\demoscripts\Scripts.zip"
+            Path        = "C:\demoscripts\Scripts.zip"
             Destination = "C:\Scripts"
-            Ensure="Present"
+            Ensure      = "Present"
         }
     }
 }

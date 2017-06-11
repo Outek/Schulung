@@ -52,13 +52,13 @@ Configuration UserDemo
     {
         User UserDemo
         {
-            UserName = $Credential.UserName
-            Password = $Credential
-            Description = "local account"
-            Ensure = "Present"
-            Disabled = $false
-            PasswordNeverExpires = $true
-            PasswordChangeRequired = $false
+            UserName                = $Credential.UserName
+            Password                = $Credential
+            Description             = "local account"
+            Ensure                  = "Present"
+            Disabled                = $false
+            PasswordNeverExpires    = $true
+            PasswordChangeRequired  = $false
         }
 
         # v1

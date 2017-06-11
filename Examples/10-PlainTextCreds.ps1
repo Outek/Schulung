@@ -10,13 +10,13 @@ Configuration UserDemo
     {
         User UserDemo
         {
-            UserName = $Credential.UserName
-            Password = $Credential
-            Description = "local account"
-            Ensure = "Present"
-            Disabled = $false
-            PasswordNeverExpires = $true
-            PasswordChangeRequired = $false
+            UserName                = $Credential.UserName
+            Password                = $Credential
+            Description             = "local account"
+            Ensure                  = "Present"
+            Disabled                = $false
+            PasswordNeverExpires    = $true
+            PasswordChangeRequired  = $false
         }
     }
 }
@@ -36,7 +36,7 @@ $ConfigData =
         #    PSDscAllowPlainTextPassword = $true
         #},
         @{
-            NodeName = "S12R2-01"
+            NodeName                    = "S12R2-01"
             PSDscAllowPlainTextPassword = $true
         }
     )
@@ -53,13 +53,13 @@ Configuration UserDemo
     {
         User UserDemo
         {
-            UserName = $Credential.UserName
-            Password = $Credential
-            Description = "local account"
-            Ensure = "Present"
-            Disabled = $false
-            PasswordNeverExpires = $true
-            PasswordChangeRequired = $false
+            UserName                = $Credential.UserName
+            Password                = $Credential
+            Description             = "local account"
+            Ensure                  = "Present"
+            Disabled                = $false
+            PasswordNeverExpires    = $true
+            PasswordChangeRequired  = $false
         }
     }
 }
@@ -81,9 +81,9 @@ $ConfigData =
         #    PSDscAllowPlainTextPassword = $true
         #},
         @{
-            NodeName = "S12R2-01"
+            NodeName                    = "S12R2-01"
             PSDscAllowPlainTextPassword = $true
-            PSDscAllowDomainUser = $true
+            PSDscAllowDomainUser        = $true
         }
     )
 }

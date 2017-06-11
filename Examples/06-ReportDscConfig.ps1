@@ -21,4 +21,3 @@ Test-DscConfiguration -ComputerName S16-01 -Detailed
 
 # test the desired state of a system against a reference configuration
 Test-DscConfiguration -ComputerName S16-01 -ReferenceConfiguration C:\DemoScripts\Archivedemo\S16-01.mof -Verbose
-

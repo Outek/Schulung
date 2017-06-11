@@ -11,9 +11,9 @@ Configuration ArchiveDemo {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
     Node $NodeNames {
         Archive ArchiveDemo {
-            Path = $ArchivePath
+            Path        = $ArchivePath
             Destination = $DestinationPath
-            Ensure="Present"
+            Ensure      = "Present"
         }
     }
 }

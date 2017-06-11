@@ -9,9 +9,9 @@ Configuration ArchiveDemo {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
     Node $NodeNames {
         Archive ArchiveDemo {
-            Path = $ArchivePath
+            Path        = $ArchivePath
             Destination = $DestinationPath
-            Ensure="Present"
+            Ensure      = "Present"
         }
     }
 }
@@ -50,15 +50,15 @@ $ConfigData =
     AllNodes = 
     @(
         @{
-            NodeName    = "S16-01"
-            ArchivePath = "C:\Demoscripts\WebScripts.zip"
+            NodeName        = "S16-01"
+            ArchivePath     = "C:\Demoscripts\WebScripts.zip"
         },
         @{
-            NodeName    = "S16-02"
-            ArchivePath = "C:\Demoscripts\AppScripts.zip"
+            NodeName        = "S16-02"
+            ArchivePath     = "C:\Demoscripts\AppScripts.zip"
         },
         @{
-            NodeName = "*"
+            NodeName        = "*"
             DestinationPath = "C:\Scripts"
         }
     ) 
@@ -89,17 +89,17 @@ $ConfigData =
     AllNodes = 
     @(
         @{
-            NodeName    = "S16-01"
-            ArchivePath = "C:\Demoscripts\WebScripts.zip"
-            Role = 'Web'
+            NodeName        = "S16-01"
+            ArchivePath     = "C:\Demoscripts\WebScripts.zip"
+            Role            = 'Web'
         },
         @{
-            NodeName    = "S12R2-01"
-            ArchivePath = "C:\Demoscripts\AppScripts.zip"
-            Role = 'App'
+            NodeName        = "S12R2-01"
+            ArchivePath     = "C:\Demoscripts\AppScripts.zip"
+            Role            = 'App'
         },
         @{
-            NodeName = "*"
+            NodeName        = "*"
             DestinationPath = "C:\Scripts"
         }
     ) 
@@ -113,17 +113,17 @@ Configuration ArchiveDemo {
     Node $AllNodes.Where{$_.Role -eq "Web"}.NodeName
     {
         xHostsFile AddHostsFile {
-            IPAddress = '109.101.0.10'
-            HostName = 'TESTHost1'
-            Ensure = "Present"
+            IPAddress   = '109.101.0.10'
+            HostName    = 'TESTHost1'
+            Ensure      = "Present"
         }
     }
 
     Node $AllNodes.NodeName {
         Archive ArchiveDemo {
-            Path = $Node.ArchivePath
+            Path        = $Node.ArchivePath
             Destination = $Node.DestinationPath
-            Ensure="Present"
+            Ensure      = "Present"
         }
     }
 }

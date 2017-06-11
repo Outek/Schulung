@@ -26,8 +26,8 @@ Configuration DemoCustomResourceConfig
         xHostsFile HostsFileUpdate 
         {
             IPAddress = '109.10.10.10'
-            HostName = 'TESTHost'
-            Ensure = 'Absent'
+            HostName  = 'TESTHost'
+            Ensure    = 'Absent'
         }
     }
 }

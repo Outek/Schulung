@@ -3,10 +3,10 @@ Get-CimClass -Namespace root/microsoft/windows/desiredstateconfiguration -ClassN
 
 # MSFT_DSCLocalConfigurationManager implements core LCM
 # Implements several methods that the commands from PSDesiredStateConfiguration module invoke
-Get-CimClass -ClassName MSFT_DSCLocalConfigurationManager -Namespace root/microsoft/windows/desiredstateconfiguration | Select -ExpandProperty CimClassMethods
+Get-CimClass -ClassName MSFT_DSCLocalConfigurationManager -Namespace root/microsoft/windows/desiredstateconfiguration | Select-Object -ExpandProperty CimClassMethods
 
 # MSFT_DSCMetaConfiguration implements the LCM configuration settings
-Get-CimClass -ClassName MSFT_DSCMetaConfiguration -Namespace root/microsoft/windows/desiredstateconfiguration | Select -ExpandProperty CimClassProperties
+Get-CimClass -ClassName MSFT_DSCMetaConfiguration -Namespace root/microsoft/windows/desiredstateconfiguration | Select-Object -ExpandProperty CimClassProperties
 
 # The Get-DscLocalConfigurationManager command retrieves the LCM settings
 # Understand the configurable settings

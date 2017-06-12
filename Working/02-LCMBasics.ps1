@@ -18,7 +18,7 @@ Get-DscLocalConfigurationManager
 [System.Management.Automation.Language.DynamicKeyword]::GetKeyword() | Where-Object { $_.ImplementingModule -eq 'PSDesiredStateConfigurationEngine' } | Select Keyword
 
 # Get the configurale properties on a meta resource
-[System.Management.Automation.Language.DynamicKeyword]::GetKeyword('Settings') | Select -ExpandProperty Properties
+[System.Management.Automation.Language.DynamicKeyword]::GetKeyword('Settings') | Select-Object -ExpandProperty Properties
 
 # The v1 meta resource for configuring LCM is LocalConfigutationManager
 [System.Management.Automation.Language.DynamicKeyword]::GetKeyword('LocalConfigurationManager')
@@ -28,45 +28,3 @@ Get-DscLocalConfigurationManager
 # There are certain scenarios where this is a problem and will discuss that when talking about DSC RunAs Crednetials
 # This can be verified using a DSC configuration document or by using Invoke-DscResource. 
 # Don't worry about whats in this document but pay attention to the verbose output.
-
-# if you don't want to apply, you can make use of Invoke-DscResource to test stuff out
-Invoke-DscResource -ModuleName PSDesiredStateConfiguration -Name Script -Method Test -Verbose -Property @{
-    GetScript = {
-        return @{
-            GetScript = $GetScript
-            SetScript = $SetScript
-            TestScript = $TestScript
-            Result = whoami.exe
-        }
-    }
-    SetScript = {
-        $null
-    }
-    TestScript = {
-        Write-Verbose -Message "This configuration is running as: $(whoami)"
-        return $true
-    }
-}
-
-
-# The following is a DSC configuration document that uses script resource
-Configuration SYSTEMDemo
-{
-    Script Demo
-    {
-        GetScript = {
-            return @{}
-        }
-
-        SetScript = {
-            Write-Verbose -Message "This configuration is running as: $(whoami)"
-        }
-
-        TestScript = {
-            return $false
-        }
-    }
-}
-
-SYSTEMDemo -outputPath C:\DemoScripts\SystemDemo
-Start-DscConfiguration -Path C:\DemoScripts\SystemDemo -Verbose -Wait

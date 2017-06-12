@@ -1,4 +1,4 @@
-﻿# Exploring Langauge Extensions
+﻿# Exploring Language Extensions
 Get-Module -ListAvailable -Name PSDesiredStateConfiguration
 
 # Get all exported commands from PSDesiredStateConfiguration

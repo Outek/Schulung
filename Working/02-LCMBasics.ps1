@@ -15,7 +15,7 @@ Get-DscLocalConfigurationManager
 # LCM itself can be configured using a meta configuration document; These meta resources are exported by PSDesiredStateConfigurationEngine Module
 # The PSDesiredStateConfigurationEngine is v2; These resources won't get listed in the output of Get-DscResource 
 [Microsoft.PowerShell.DesiredStateConfiguration.Internal.DscClassCache]::LoadDefaultCimKeywords()
-[System.Management.Automation.Language.DynamicKeyword]::GetKeyword() | Where-Object { $_.ImplementingModule -eq 'PSDesiredStateConfigurationEngine' } | Select Keyword
+[System.Management.Automation.Language.DynamicKeyword]::GetKeyword() | Where-Object { $_.ImplementingModule -eq 'PSDesiredStateConfigurationEngine' } | Select-Object Keyword
 
 # Get the configurale properties on a meta resource
 [System.Management.Automation.Language.DynamicKeyword]::GetKeyword('Settings') | Select-Object -ExpandProperty Properties

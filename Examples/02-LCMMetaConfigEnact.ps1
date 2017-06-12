@@ -14,7 +14,7 @@ configuration LCMConfig
 }
 
 # Running the meta configuration compiles it into a MOF
-LCMConfig
+LCMConfig 
 
 # Set-DscLocalConfigurationManager configures the LCM from the compiled MOF
 Set-DscLocalConfigurationManager -Path .\LCMConfig

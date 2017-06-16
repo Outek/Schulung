@@ -74,5 +74,4 @@ New-DscChecksum -Path C:\DemoScripts\ArchiveDemoForPull\ArchiveDemo.mof -OutPath
 # update the LCM client so that it downloads the configuration and modules
 Update-DscConfiguration -ComputerName S12R2-01 -Wait -Verbose
 
-
 Start-DscConfiguration -Path C:\Demoscripts\CompositeDemo -Verbose -Wait -force

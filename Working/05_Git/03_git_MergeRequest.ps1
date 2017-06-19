@@ -1,6 +1,6 @@
 
 #In den Ordner wechseln(falls nicht schon erledigt)
-cd C:\Temp\Testprojekt_02 
+Set-Location C:\Temp\Testprojekt_02 
 
 #
 git checkout –b feature_test

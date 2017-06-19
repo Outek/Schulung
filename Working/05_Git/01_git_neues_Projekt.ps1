@@ -1,8 +1,8 @@
 #Ordner erstellen, bsp. C:\Temp\Testprojekt_02
-mkdir C:\Temp\Testprojekt_02
+New-Item -ItemType Directory -Name C:\Temp\Testprojekt_02
 
 #In den Ordner wechseln(falls nicht schon erledigt)
-cd C:\Temp\Testprojekt_02
+Set-Location C:\Temp\Testprojekt_02
 
 #Git in diesem Ordner initiieren(.git Ordner wird erstellt)
 git init

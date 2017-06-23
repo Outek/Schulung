@@ -1,22 +1,32 @@
 Configuration TestFirewall {
     param ()
+
+    Import-DscResource -ModuleName "xNetworking"
+
     Node Localhost 
     {
         # Create a Test File
-        xFirewall TestRule {
-            Ensure    = "Absent"
-            ValueName = "Nas_Alias"
-            ValueData = "pfnas"
-            Key       = "HKEY_LOCAL_Machine\System\CurrentControlSet\Control\Session Manager\Environment"
+        xFirewall _FTP_any_tcp_21 {
+            Name        = "_FTP_any_tcp_21"
+            Ensure      = "Present"
+            Direction   = "Outbound"
+            Description = "Rule für ausgehende FTP Verbindungen"
+            Profile     = "Domain,Private,Public"
+            RemotePort  = "21" 
+            Action      = "Block"
+            Enabled     = "True"
+            Protocol    = "TCP" 
         }
     }
 }
 
-# Find DSC resources in a specific module
-Find-DscResource -ModuleName *Firewall*
+# Suchen des Firewall Modules
+#Find-DscResource -ModuleName *Firewall*
+
+#Find-DscResource -ModuleName xNetworking
 
 # Install DSC resource modules from PowerShell Gallery
-Find-DscResource -ModuleName xFirewall | Install-Module -Force
+#Find-DscResource -ModuleName xNetworking | Install-Module -Force
  
 # Create MOF Files
 TestFirewall -OutputPath C:\DscDemo

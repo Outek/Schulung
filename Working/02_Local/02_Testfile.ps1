@@ -7,7 +7,7 @@ Configuration TestFile {
         {
             Ensure          = "Present"
             DestinationPath = "C:\DscDemo\example.txt"
-            Contents        = "Hello World."
+            Contents        = "Hallo PostFinance"
             Type            = "File"
         }
     }

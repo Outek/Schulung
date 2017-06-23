@@ -6,7 +6,7 @@ Configuration TestRegistry {
         Registry DSCRegistry {
             Ensure    = "Absent"
             ValueName = "Nas_Alias"
-            ValueData = "pfnas"
+            ValueData = "Linuxstinkt_NAS"
             Key       = "HKEY_LOCAL_Machine\System\CurrentControlSet\Control\Session Manager\Environment"
         }
     }

@@ -45,4 +45,6 @@ Die Ausprägungen und erledigte Jobs sind beinahe unbegrenzt.
 
 ![Gemischtwarenladen](http://www.bogotobogo.com/DevOps/images/DevOps/PipeLIne/CloudBeesBlog.png)
 
-![Pieline](https://image.slidesharecdn.com/presentationvincentintegrationcontinue-170217204017/95/gitlab-ci-integration-et-dploiement-continue-7-638.jpg?cb=1487364120)
+![Pipeline](https://image.slidesharecdn.com/presentationvincentintegrationcontinue-170217204017/95/gitlab-ci-integration-et-dploiement-continue-7-638.jpg?cb=1487364120)
+
+[Building a Continuous Integration and Continuous Deplyoment pipeline with DSC](https://msdn.microsoft.com/en-us/powershell/dsc/dsccicd)

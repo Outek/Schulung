@@ -10,15 +10,14 @@ Get-Command -Name Configuration | Select-Object CommandType, ModuleName, Paramet
 # The ResourceModuleTuplesToImport is a parameter that gets added at runtime; Identifies the modules that are imported in a configuration
 Get-Command -Name Configuration | Select-Object -ExpandProperty Parameters
 
-# Other Dynamic keywords from PSDesiredStateConfiguration module
-# Load the default CIM Keywords
+# Laden der CIM Daten
 [Microsoft.PowerShell.DesiredStateConfiguration.Internal.DscClassCache]::LoadDefaultCimKeywords()
 
-# Observe the Node and Import-DscResource keywords in the output. These are used in authoring configurations.
+# Betrachten der importierten Ressourcen und Module
 [System.Management.Automation.Language.DynamicKeyword]::GetKeyword() | Select-Object Keyword, ImplementingModule
 
-# Cmdlets that manage configuration
+# Cmdlets für die Verwendung von Dsc Befehlen
 Get-Command -Module PSDesiredStateConfiguration -Noun DSCConfiguration*
 
-# List all resources in the module path
+# Liste mit allen Dsc Modulen
 Get-DscResource

@@ -1,26 +1,26 @@
 
 #Go to www.github.com
-#Search for "outek" , switch to users
+#Suche nach "outek" , wechseln zum Benutzer
 
-#download zip file, save and unzip it somewhere..
+#download zip file, auf dem Desktop speichern und entpacken
 https://github.com/Outek/Schulung
 
-#Set ExecutionPolicy
+#Set Powershell ExecutionPolicy
 Set-ExecutionPolicy Unrestricted
 
-#install chocolatey
+#Installieren von Chocolatey
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-#close powershell, open new session as admin
+#Powershell schliessen und eine neue Session als Administrator starten
 
-#install vscode, vscode_powershell extension for vscode, chrome, git
+#Installieren vscode, chrome, git mit Chocolatey
 choco install visualstudiocode git googlechrome -y
 
-#open visual studio code
-#activate powershell extension, click on reload to activate the extension
+#Visual Studio Code öffnen
+#Powershell Extension installieren, reload drücken für Reload zum Aktivieren der Extension
 
-#activate integtrated terminal
-# go to "view", click on integrated terminal
+#aktivieren des integrierten Terminals
+# go to "view", klick auf Integrated Terminal
 
 #click on customize, chose powershell.exe
 #git clone https://github.com/Outek/Schulung.git

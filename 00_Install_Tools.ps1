@@ -14,7 +14,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 #close powershell, open new session as admin
 
 #install vscode, vscode_powershell extension for vscode, chrome, git
-choco install visualstudiocode git googlechrome vscode-powershell -y
+choco install visualstudiocode git googlechrome -y
 
 #open visual studio code
 #activate powershell extension, click on reload to activate the extension

@@ -18,18 +18,18 @@ Jeder hat lokal Dsc Ressourcen erstellt und getestet, weiss dass es verschiedene
 Wir werden uns auf virtuellen Servern in Azure aufhalten. Der Grund für dieses Vorgehen ist die Vereinfachung von Zugriffen auf benötigen Ressourcen und Tools, ohne dass wir uns um ProxyServer, Firewalls und ähnliches kümmern müssen. 
 
 Eure persönlichen VMs:
-Hollinger Patrick = 
-Corpataux Michel = 
-Kilchoer Bertrand = 
-Maurer Dominic = 
-Mueller-Schäublin Harald = 
-Rietmann Selina = 
-Schwer Christoph = 
-Steiner Manfred = 
-Stocker Renato = 
-Siegenthaler Daniel = 
+- Hollinger Patrick = 
+- Corpataux Michel = 
+- Kilchoer Bertrand = 
+- Maurer Dominic = 
+- Mueller-Schäublin Harald = 
+- Rietmann Selina = 
+- Schwer Christoph = 
+- Steiner Manfred = 
+- Stocker Renato = 
+- Siegenthaler Daniel = 
 
-## Links zu en verschiednenen Themen
+## Links zu den verschiedenen Themen
 
 [Microsoft Virtual Academy Powershell Dsc Kurs](https://mva.microsoft.com/en-US/training-courses/getting-started-with-power-shell-desired-state-configuration-dsc-8672?l=ZwHuclG1_2504984382)
 

@@ -4,9 +4,9 @@
 
 Git ist eine freie Software zur verteilten Versionsverwaltung von Dateien, die durch Linus Torvalds initiiert wurde.
 
-*[Git](https://git-scm.com/)
+[Git](https://git-scm.com/)
 
-*[git - Der einfach Einsteig - kein Schnickschnack](http://rogerdudler.github.io/git-guide/index.de.html)
+[git - Der einfach Einsteig - kein Schnickschnack](http://rogerdudler.github.io/git-guide/index.de.html)
 
 #Aufgaben / Ziele
 - Abläufe verstehen, Git verstehen (00)

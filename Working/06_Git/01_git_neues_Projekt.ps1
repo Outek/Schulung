@@ -23,5 +23,5 @@ git add .
 #Commit machen
 git commit -m "Initial commit"
 
-#
+#Git Push
 git push -u origin master

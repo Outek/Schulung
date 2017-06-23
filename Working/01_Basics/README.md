@@ -4,7 +4,6 @@
 - Visual Studio Code für seine Bedürfnisse einrichten
 - Powershell Extension installieren
 - Dsc Befehle in Visual Studio Code ausführen
-- 
 
 ## Ziele
 - Jeder hat die Dsc Grundbefehle ausgeführt, weiss ungefähr wie man die verschiedenen Befehle starten kann

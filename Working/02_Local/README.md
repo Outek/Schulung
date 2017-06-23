@@ -12,4 +12,4 @@ Eigene Konfigurationen erstellen und testen.
 ## Links
 [DSC Ressourcen](https://github.com/PowerShell/DscResources/tree/master/xDscResources)
 
-[]()
+[Configuring the Local Configuration Manager](https://msdn.microsoft.com/en-us/powershell/dsc/metaconfig)

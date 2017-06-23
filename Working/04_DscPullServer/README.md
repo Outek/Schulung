@@ -11,3 +11,6 @@
 - Jeder versteht, was ein Push Server macht
 - Allfällige Aufgabengebiete sind bekannt
 - Verbindungsaufbau der Server/Client Verbindung wurde verstanden
+
+## Links
+[Setting up a DSC web pull server](https://msdn.microsoft.com/en-us/powershell/dsc/pullServer)

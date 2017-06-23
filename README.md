@@ -1,5 +1,7 @@
 # Powershell - Desired State Configuration - Configuration Management - Git - CI/CD - Chocolatey - Workshop
 
+[keep calm](https://i-technet.sec.s-msft.com/ru-ru/windowsserver/dn960146.01(ru-ru,MSDN.10).png)
+
 ## Inhalt
 - Dsc Basics (01)
 - Dsc lokale Configurationen (02)
@@ -10,7 +12,7 @@
 - Live Demos von Tests und produktiven CI/CD Sachen (07)
 
 ## Ziele
-Ziel von diesem Workshop ist es, gemeinsam die Basis für Dsc zu erarbeiten und das Verständnis zu schärfen, was alles mit Dsc machbar ist.
+Ziel von diesem Workshop ist es, gemeinsam die Basis für Dsc zu erarbeiten und das Verständnis zu schärfen, was alles mit Dsc machbar ist oder sein könnte.
 Am Ende des Morgens sollte jeder verstehen, was Git ist, was eine Pipeline macht, warum Dsc einen Schritt vorwärts ist und warum Source Control unser tägliches Arbeiten unterstützen kann.
 Jeder hat lokal Dsc Ressourcen erstellt und getestet, weiss dass es verschiedene Verteilchmechanismen gibt und hat ein Git Repo eingecheckt und Anpassungen hochgepusht.
 

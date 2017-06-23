@@ -1,6 +1,6 @@
 # Powershell - Desired State Configuration - Configuration Management - Git - CI/CD - Chocolatey - Workshop
 
-[keep calm](https://i-technet.sec.s-msft.com/ru-ru/windowsserver/dn960146.01(ru-ru,MSDN.10).png)
+![keep calm](https://i-technet.sec.s-msft.com/ru-ru/windowsserver/dn960146.01(ru-ru,MSDN.10).png)
 
 ## Inhalt
 - Dsc Basics (01)

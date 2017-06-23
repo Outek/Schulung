@@ -27,9 +27,9 @@ Configuration TestFirewall {
 
 # Install DSC resource modules from PowerShell Gallery
 #Find-DscResource -ModuleName xNetworking | Install-Module -Force
- 
+
 # Create MOF Files
 TestFirewall -OutputPath C:\DscDemo
- 
+
 # Start DSC Configuration
 Start-DscConfiguration -Path C:\DscDemo -Verbose -Wait

@@ -12,9 +12,9 @@ Configuration TestFile {
         }
     }
 }
- 
+
 # Create MOF Files
 TestFile -OutputPath C:\DscDemo
- 
+
 # Start DSC Configuration
 Start-DscConfiguration -Path C:\DscDemo -Verbose -Wait

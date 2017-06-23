@@ -11,9 +11,9 @@ Configuration TestRegistry {
         }
     }
 }
- 
+
 # Create MOF Files
 TestRegistry -OutputPath C:\DscDemo
- 
+
 # Start DSC Configuration
 Start-DscConfiguration -Path C:\DscDemo -Verbose -Wait

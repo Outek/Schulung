@@ -8,5 +8,3 @@ git config --global user.name "username"
 git config user.name "username"
 
 #Git einrichten
-
-#Git ignore file

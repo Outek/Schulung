@@ -1,0 +1,25 @@
+stages:
+  - analyze
+  - test
+  - build
+  - release
+Analyze: 
+  tags:
+    - windows
+  stage: analyze
+  script: powershell.exe ./build.ps1 -Task "analyze"
+Test: 
+  tags:
+    - windows
+  stage: test
+  script: powershell.exe ./build.ps1 -Task "test"
+Build: 
+  tags:
+    - windows
+  stage: build
+  script: powershell.exe ./build.ps1 -Task "build"
+Release: 
+  tags:
+    - windows
+  stage: release
+  script: powershell.exe ./build.ps1 -Task "release"

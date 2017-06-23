@@ -30,8 +30,19 @@ Mögliche Arbeiten, welche von der build.ps1 Datei ausgelöst werden können:
 Die Pipelines könne isch stark voneinenander unterscheiden.
 Die Ausprägungen und erledigte Jobs sind beinahe unbegrenzt. 
 
+![pipeline-graph](https://docs.gitlab.com/ce/ci/img/pipelines.png)
+
+![types](https://docs.gitlab.com/ce/ci/img/types-of-pipelines.svg)
+
 ## Aufgaben 
 - gitlab-ci.yml Zweck und Konfiguration verstehen
 - .gitignore Zweck verstehen
 
-![pipelinegraph](cicd_pipeline_infograph)
+![pipelinegraph](.\09_Pictures\cicd_pipeline_infograph)
+
+
+## Beispiele von Pipelines
+
+![Gemischtwarenladen](http://www.bogotobogo.com/DevOps/images/DevOps/PipeLIne/CloudBeesBlog.png)
+
+![Pieline](https://image.slidesharecdn.com/presentationvincentintegrationcontinue-170217204017/95/gitlab-ci-integration-et-dploiement-continue-7-638.jpg?cb=1487364120)

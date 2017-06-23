@@ -38,7 +38,7 @@ Die Ausprägungen und erledigte Jobs sind beinahe unbegrenzt.
 - gitlab-ci.yml Zweck und Konfiguration verstehen
 - .gitignore Zweck verstehen
 
-![pipelinegraph](.\09_Pictures\cicd_pipeline_infograph)
+![pipelinegraph](https://docs.gitlab.com/ce/ci/img/cicd_pipeline_infograph.png)
 
 
 ## Beispiele von Pipelines

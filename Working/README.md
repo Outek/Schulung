@@ -31,20 +31,14 @@ Siegenthaler Daniel =
 
 ## Links zu en verschiednenen Themen
 
-*[Microsoft Virtual Academy Powershell Dsc Kurs](https://mva.microsoft.com/en-US/training-courses/getting-started-with-power-shell-desired-state-configuration-dsc-8672?l=ZwHuclG1_2504984382)
+[Microsoft Virtual Academy Powershell Dsc Kurs](https://mva.microsoft.com/en-US/training-courses/getting-started-with-power-shell-desired-state-configuration-dsc-8672?l=ZwHuclG1_2504984382)
 
-*[Github](https://github.com/)
+[Github](https://github.com/)
 
-*[Github Microsoft](https://github.com/Microsoft)
+[Github Microsoft](https://github.com/Microsoft)
 
-*[Gitlab](https://about.gitlab.com/)
+[Gitlab](https://about.gitlab.com/)
 
-*[Powershell Dsc](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview)
+[Powershell Dsc](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview)
 
-*[Chocolatey](https://chocolatey.org/)
-
-*[]()
-
-*[]()
-
-*[]()
+[Chocolatey](https://chocolatey.org/)

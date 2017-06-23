@@ -13,11 +13,11 @@ Configuration TestFolder {
 } 
 
 #Huhn und Ei Problem ;)
-If(!(Test-Path C:\DscDemo)){ New-Item -Path C:\DscDemo -ItemType Directory }
+#If (!(Test-Path C:\DscDemo)) { New-Item -Path C:\DscDemo -ItemType Directory }
 
 # Create MOF Files
 TestFolder -OutputPath C:\DscDemo
- 
+
 # Start DSC Configuration, Path zeigt dorthin wo das erstellt *.mof File liegt.
 # Verbose aktiviert den Output
 Start-DscConfiguration -Path C:\DscDemo -Verbose -Wait

@@ -10,9 +10,9 @@ Configuration TestWindowsFeature {
         }
     }
 }
- 
+
 # Create MOF Files
 TestWindowsFeature -OutputPath C:\DscDemo
- 
+
 # Start DSC Configuration
 Start-DscConfiguration -Path C:\DscDemo -Verbose -Wait

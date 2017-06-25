@@ -6,11 +6,18 @@
 
 ## Aufträge
 - Mal schauen, wie viel wir erreichen ;)
+- Pull Server installieren
+- Pull Server Configuration erstellen
+- Client konfigurieren
 
 ## Ziele
 - Jeder versteht, was ein Push Server macht
 - Allfällige Aufgabengebiete sind bekannt
 - Verbindungsaufbau der Server/Client Verbindung wurde verstanden
+- Pull Server konnte konfguriert werden
+- Partielle Ressource konnte erstellt werden
 
 ## Links
 [Setting up a DSC web pull server](https://msdn.microsoft.com/en-us/powershell/dsc/pullServer)
+
+[PowerShell Desired State Configuration partial configurations](https://msdn.microsoft.com/en-us/powershell/dsc/partialconfigs)

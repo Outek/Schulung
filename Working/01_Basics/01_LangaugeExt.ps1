@@ -4,7 +4,7 @@ Get-Module -ListAvailable -Name PSDesiredStateConfiguration
 # Get all exported commands from PSDesiredStateConfiguration
 Get-Command -Module PSDesiredStateConfiguration
 
-# Explore the configuration keyword
+# Keywords
 Get-Command -Name Configuration | Select-Object CommandType, ModuleName, Parameters
 
 # The ResourceModuleTuplesToImport is a parameter that gets added at runtime; Identifies the modules that are imported in a configuration

@@ -2,7 +2,7 @@
 #In den Ordner wechseln(falls nicht schon erledigt)
 Set-Location C:\Temp\Testprojekt_02 
 
-#
+#Checkout des Projekte sund Erstellen eines Clones
 git checkout –b feature_test
 
 ########################################################

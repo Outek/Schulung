@@ -18,6 +18,15 @@ Configuration TestFolder {
 # Create MOF Files
 TestFolder -OutputPath C:\DscDemo
 
-# Start DSC Configuration, Path zeigt dorthin wo das erstellt *.mof File liegt.
+# Start DSC Configuration, Path zeigt dorthin wo das erstellt *.mof File liegt
 # Verbose aktiviert den Output
 Start-DscConfiguration -Path C:\DscDemo -Verbose -Wait
+
+#Test, ob die Konfiguration dem entspricht, was erwartet wird
+Test-DscConfiguration -ComputerName localhost -Detailed
+
+#Lösche den Ordner und teste nochmal
+Remove-Item -Path "C:\DscDemo\FolderA" -Force
+
+# Es kann auch auf einen Konfiguration referenziert werden
+Test-DscConfiguration -ComputerName localhost -ReferenceConfiguration C:\DscDemo\Localhost.mof -Verbose

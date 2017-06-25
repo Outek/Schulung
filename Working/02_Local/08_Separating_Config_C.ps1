@@ -73,7 +73,10 @@ Configuration MyWebApp
     }
 }
 
+#Fehlendes SQL Module impotieren
 # Find-DscResource -ModuleName xSqlPs | Install-Module -Force
+
+#Fehlendes IIS Module Module impotieren
 # Find-DscResource -ModuleName xWebAdministration | Install-Module -Force
 
 MyWebApp -ConfigurationData .\08_Separating_Config_Env.psd1 -OutputPath C:\DscDemo

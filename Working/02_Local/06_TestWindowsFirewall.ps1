@@ -33,3 +33,6 @@ TestFirewall -OutputPath C:\DscDemo
 
 # Start DSC Configuration
 Start-DscConfiguration -Path C:\DscDemo -Verbose -Wait
+
+#Prüfen ob die Rule erstellt wurde
+Get-NetFirewallRule | Where-Object { $_.DisplayName -eq "_FTP_any_tcp_21" }

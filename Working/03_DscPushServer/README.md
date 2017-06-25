@@ -9,3 +9,6 @@
 - Jeder versteht, was ein Push Server macht
 - Allfällige Aufgabengebiete sind bekannt
 - Verbindungsaufbau der Server/Client Verbindung wurde verstanden 
+
+## Links
+[PowerShell Desired State Configuration: LCM and Push Management Model](https://www.simple-talk.com/sysadmin/powershell/powershell-desired-state-configuration-lcm-and-push-management-model/)

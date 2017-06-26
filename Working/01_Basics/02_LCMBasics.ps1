@@ -16,7 +16,7 @@ Get-DscLocalConfigurationManager
 [Microsoft.PowerShell.DesiredStateConfiguration.Internal.DscClassCache]::LoadDefaultCimKeywords()
 [System.Management.Automation.Language.DynamicKeyword]::GetKeyword() | Where-Object { $_.ImplementingModule -eq 'PSDesiredStateConfigurationEngine' } | Select-Object Keyword
 
-#Alle konfigurierbaren meta resourcen
+#Alle konfigurierbaren meta resourcen aus den "Settings"
 [System.Management.Automation.Language.DynamicKeyword]::GetKeyword('Settings') | Select-Object -ExpandProperty Properties
 
 # The v1 meta resource for configuring LCM is LocalConfigutationManager

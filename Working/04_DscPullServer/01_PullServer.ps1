@@ -5,7 +5,7 @@
 ###################################################################
 #Thumbprint vom neu erstellten self-signed Zertifikat hier einfügen
 ####---------->
-$thumbprint = 'CFBEDB6C6DB59308A46D8923016C841DF8BB6AD4'
+$thumbprint = 'B1ABA719DC5964F0050EA32CE4F62CFE93655C4F'
 ####<----------
 ###################################################################
 
@@ -18,7 +18,7 @@ configuration CreateNewPullServer
 {
     param 
     (
-        [string[]]$NodeName = "localhost",
+        [string[]]$NodeName = $env:COMPUTERNAME,
  
         [ValidateNotNullOrEmpty()]
         [string] $certificateThumbPrint,
@@ -98,7 +98,6 @@ configuration CreateNewPullServer
 
 #Falls das Modul fehlt, installieren
 #Find-DscResource -ModuleName xPSDesiredStateConfiguration -Verbose | Install-Module -Force
-#Find-DscResource -ModuleName xPSDesiredStateConfiguration -Verbose | Install-Module -Force
 
 # Neues self-signed Zertifikat erstellen
 #New-SelfSignedCertificate -CertStoreLocation "cert:\LocalMachine\My" -Subject CN=Dsc_Test
@@ -108,7 +107,7 @@ configuration CreateNewPullServer
 CreateNewPullServer -OutputPath "C:\Temp\DscService\" -RegistrationKey $registrationkey -certificateThumbPrint $thumbprint
 
 #Start die Erstellung des PullServers
-Start-DscConfiguration "C:\Temp\DscService" -Verbose -Wait -Force
+Start-DscConfiguration -Path "C:\Temp\DscService" -Verbose -Wait -Force
 
 #Prüfen, ob die Website erreichbar ist.
 #https://localhost:7001/PSDSCPullServer.svc/

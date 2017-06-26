@@ -14,7 +14,7 @@ Configuration PartialConfigDemoConfigNames
         ConfigurationRepositoryWeb PSDSCPullServer
         {
             ServerURL                       = "https://localhost:7001/PSDSCPullServer.svc"    
-            RegistrationKey                 = "95a5159a-df3c-448b-b2fc-27fb9d6a78f9"  
+            RegistrationKey                 = "a2a270f1-f4a4-442f-854b-b3daf143db79"  
             ConfigurationNames              = @("FolderConfig")
         }     
 
@@ -29,15 +29,18 @@ Configuration PartialConfigDemoConfigNames
 #Erhöht die Cachegrösse von winrm, falls nötig
 #Set-WSManInstance -ValueSet @{MaxEnvelopeSizekb = "10000"} -ResourceURI winrm/config
 
+#Auflisten der vorhin erstellen Registration ID
+#Get-Content -Path C:\Temp\DscService\RegistrationKeys.txt
+
 #Erstellt das Lkale *.mof File für den LCM
-PartialConfigDemoConfigNames -OutputPath C:\Dsc
+PartialConfigDemoConfigNames -OutputPath C:\Temp\DSCService\mof_files
 
 #Registration key Einfügen
 #Konfiguriert den LCM mit Registration Key, Pull Server und Intervall
-Set-DSCLocalConfigurationManager localhost –Path C:\Dsc –Verbose
+Set-DSCLocalConfigurationManager localhost -Path C:\Temp\DSCService\mof_files –Verbose
 
 #Aktualisiert die Konfiguration vom Pull Server
 Update-DscConfiguration
 
 #Führt eine forciertes Aktualisieren der Konfiguration aus
-Start-DSCConfiguration -Wait -Force –UseExisting -Verbose
+Start-DSCConfiguration -Wait -Force -UseExisting -Verbose

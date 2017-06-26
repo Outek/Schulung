@@ -18,6 +18,10 @@ Configuration TestFolder {
 # Create MOF Files
 TestFolder -OutputPath C:\DscDemo
 
+#Erstelltes *.mof file öffnen
+notepad.exe C:\DscDemo\Localhost.mof
+#Get-Content -Path C:\DscDemo\Localhost.mof
+
 # Start DSC Configuration, Path zeigt dorthin wo das erstellt *.mof File liegt
 # Verbose aktiviert den Output
 Start-DscConfiguration -Path C:\DscDemo -Verbose -Wait

@@ -1,4 +1,6 @@
-﻿# Liste mit DSC Ressurcen welche verfügbar sind
+﻿#Dsc Resourcen als Powershell Module
+
+# Liste mit DSC Ressurcen welche verfügbar sind
 Get-DscResource
 
 # Liste mit DSC Ressurcen welche verfügbar sind von einem spezifischen Modul

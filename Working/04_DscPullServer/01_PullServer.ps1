@@ -41,13 +41,6 @@ configuration CreateNewPullServer
             Type            = "Directory"
         }
 
-        File WebserverFolder
-        {
-            Ensure          = "Present"
-            DestinationPath = "C:\Temp\inetpub"
-            Type            = "Directory"
-        }
-
         WindowsFeature Webserver
         {
             Ensure = "Present"

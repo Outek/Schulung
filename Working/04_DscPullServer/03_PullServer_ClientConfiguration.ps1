@@ -1,46 +1,49 @@
-[DSCLocalConfigurationManager()]
-configuration Demo_PullServer
+[DscLocalConfigurationManager()]
+Configuration PartialConfigDemoConfigNames
 {
-    param
-    (
-        [ValidateNotNullOrEmpty()]
-        [string] $NodeName = 'localhost',
-
-        [ValidateNotNullOrEmpty()]
-        [string] $RegistrationKey,
-
-        [ValidateNotNullOrEmpty()]
-        [string] $ServerName = 'localhost'
-    )
-
-    Node $NodeName
-    {
         Settings
         {
-            RefreshMode                    = 'Pull'
-            RefreshFrequencyMins           = 30
-            ConfigurationModeFrequencyMins = 15;  
-            RebootNodeIfNeeded             = $true
-            ConfigurationMode              = 'ApplyAndAutoCorrect';
+            RefreshFrequencyMins            = 30;
+            RefreshMode                     = "PULL";
+            ConfigurationMode               ="ApplyAndAutocorrect";
+            AllowModuleOverwrite            = $true;
+            RebootNodeIfNeeded              = $true;
+            ConfigurationModeFrequencyMins  = 30;
         }
 
-        ConfigurationRepositoryWeb CONTOSO-PullSrv
+        ConfigurationRepositoryWeb PSDSCPullServer
         {
-            ServerURL          = "https://$ServerName`:7001/PSDSCPullServer.svc" # https
-            RegistrationKey    = $RegistrationKey
-            ConfigurationNames = @('ServerConfig')
-        }   
-    }
+            ServerURL                       = 'https://localhost:7001/PSDSCPullServer.svc'    
+            RegistrationKey                 = '63cd3c15-824f-4cdd-87dc-ef817b9028e9'     
+            ConfigurationNames              = @("RegistryConfig","FolderConfig")
+        }     
+
+        PartialConfiguration RegistryConfig
+        {
+            Description                     = "RegistryConfig"
+            ConfigurationSource             = @("[ConfigurationRepositoryWeb]PSDSCPullServer")
+            RefreshMode                     = 'Pull' 
+        }
+
+        PartialConfiguration FolderConfig
+        {
+            Description                     = "FolderConfig"
+            ConfigurationSource             = @("[ConfigurationRepositoryWeb]PSDSCPullServer")
+            RefreshMode                     = 'Pull' 
+        }
 }
 
-#Einfügen der Configuration ID aus dem erstellen file
-$registrationkey = "ba92fec1-6a6e-4be3-9e50-560c1575785f"
+#Erhöht die Cachegrösse von winrm, falls nötig
+#Set-WSManInstance -ValueSet @{MaxEnvelopeSizekb = "10000"} -ResourceURI winrm/config
 
-# Sample use (please change values of parameters according to your scenario):
-Demo_PullServer -RegistrationKey $registrationkey -OutputPath C:\Temp
+#Erstellt das Lkale *.mof File für den LCM
+PartialConfigDemoConfigNames -OutputPath C:\Temp\mof_files
 
-# update the LCM client so that it downloads the configuration and modules
-Update-DscConfiguration -ComputerName localhost -Wait -Verbose
+#Konfiguriert den LCM mit Registration Key, Pull Server und Intervall
+Set-DSCLocalConfigurationManager localhost –Path C:\Temp\mof_files\ –Verbose
 
-# Run Configuration
-Start-DSCConfiguration -Path C:\Temp -Wait -Verbose -Force
+#Aktualisiert die Konfiguration vom Pull Server
+Update-DscConfiguration
+
+#Führt eine forciertes Aktualisieren der Konfiguration aus
+Start-DSCConfiguration -Wait -Force –UseExisting -Verbose

@@ -8,7 +8,7 @@ https://github.com/Outek/Schulung
 #Powershell ISE als Admin starten
 
 #Set Powershell ExecutionPolicy
-Set-ExecutionPolicy Unrestricted
+Set-ExecutionPolicy Unrestricted -Force
 
 #Installieren von Chocolatey
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -28,12 +28,12 @@ choco install visualstudiocode git googlechrome -y
 #C:\Temp\Schulung
 
 #Zeitrahmen
-#Dsc 1,5h
+#Dsc 2h
     #- LCM
     #- Test & Ausprobieren
     #- Pull/Push Server
 
-#Git 1h
+#Git 30min
     #- Neues Repo erstellen
     #- Fork/Clone
     #- Push/Pull/Merge
@@ -41,7 +41,7 @@ choco install visualstudiocode git googlechrome -y
 #Pipelines 0,5h
     #- Überblick
 
-#Demo Pipeline 0,5h
+#Demos 1h
     #- Demo Pipeline
 
 #Offene Diskussion(freiwillig) 13:00-15:00

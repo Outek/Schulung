@@ -12,8 +12,7 @@ Git ist eine freie Software zur verteilten Versionsverwaltung von Dateien, die d
 - Abläufe verstehen, Git verstehen (00)
 - Neues Projekt erstellen, bestehender Ordner integrieren (01)
 - Checkout von einem bestehenden Projekt (02)
-- Merge Request verstehen und einen erstellen (03) 
-
+- Merge Request/Pull Request verstehen und einen erstellen (03) 
 
 #Stolpersteine
 - Line Endings mit Linux

@@ -9,7 +9,10 @@ Find-DscResource
 
 # Liste von DSC Ressourcen in einem spezifischen Module
 Find-DscResource -ModuleName cHyper-V
+Find-DscResource -ModuleName xHyper-V
 Find-DscResource -ModuleName xSQLServer
 
 # Install DSC resource modules from PowerShell Gallery
-Find-DscResource -ModuleName xNetworking | Install-Module -Force
+Find-DscResource -ModuleName xNetworking | Install-Module -Force -Verbose
+
+Find-DscResource -ModuleName xPSDesiredStateConfiguration | Install-Module -Force -Verbose

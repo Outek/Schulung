@@ -5,13 +5,13 @@
 #download zip file, auf dem Desktop speichern und entpacken
 https://github.com/Outek/Schulung
 
+#Powershell ISE als Admin starten
+
 #Set Powershell ExecutionPolicy
 Set-ExecutionPolicy Unrestricted
 
 #Installieren von Chocolatey
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
-#Powershell schliessen und eine neue Session als Administrator starten
 
 #Installieren vscode, chrome, git mit Chocolatey
 choco install visualstudiocode git googlechrome -y

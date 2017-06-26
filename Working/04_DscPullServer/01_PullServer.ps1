@@ -5,7 +5,7 @@
 ###################################################################
 #Thumbprint vom neu erstellten self-signed Zertifikat hier einfügen
 ####---------->
-$thumbprint = '‎D3FFC2255A62AE80732E18F8D6F559A601F41118'
+$thumbprint = 'CFBEDB6C6DB59308A46D8923016C841DF8BB6AD4'
 ####<----------
 ###################################################################
 
@@ -18,7 +18,7 @@ configuration CreateNewPullServer
 {
     param 
     (
-        [string[]]$NodeName = 'localhost',
+        [string[]]$NodeName = "localhost",
  
         [ValidateNotNullOrEmpty()]
         [string] $certificateThumbPrint,
@@ -105,7 +105,7 @@ configuration CreateNewPullServer
 #Den Thumbprint des neu erstellten Zertifikates in den oberen Teil im Script kopieren
 
 #Erstellt das Mof File für die Configuration des DSC Webservers
-CreateNewPullServer -OutputPath "C:\Temp\DscService\" -RegistrationKey $Registrationkey -certificateThumbPrint $thumbprint
+CreateNewPullServer -OutputPath "C:\Temp\DscService\" -RegistrationKey $registrationkey -certificateThumbPrint $thumbprint
 
 #Start die Erstellung des PullServers
 Start-DscConfiguration "C:\Temp\DscService" -Verbose -Wait -Force

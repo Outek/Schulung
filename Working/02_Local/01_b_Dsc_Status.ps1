@@ -1,7 +1,4 @@
-# Get Dsc Current state from remote nodes
-#Get-DscConfiguration -CimSession <RemoteServer>
-
-# Get Dsc Configuration status
+# Dsc Configuration status
 Get-DscConfigurationStatus -CimSession localhost
 
 # -All um die komplette Konfiguration anzuzeigen

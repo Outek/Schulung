@@ -20,8 +20,8 @@ choco install visualstudiocode git -y
 choco install visualstudiocode git googlechrome -y
 
 #Sobald Git installiert ist 
-new-item -path "C:\Temp"
-Set-Loaction -Path "C:\Temp"
+new-item -path "C:\Temp" -ItemType Directory
+Set-Location -Path "C:\Temp"
 
 #Git Repo downloaden
 git clone https://github.com/Outek/Schulung

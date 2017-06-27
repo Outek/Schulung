@@ -79,4 +79,4 @@ Configuration MyWebApp
 #Fehlendes IIS Module Module impotieren
 # Find-DscResource -ModuleName xWebAdministration | Install-Module -Force
 
-MyWebApp -ConfigurationData .\08_Separating_Config_Env.psd1 -OutputPath C:\DscDemo
+MyWebApp -ConfigurationData .\08_Separating_Config_2Files.psd1 -OutputPath C:\DscDemo

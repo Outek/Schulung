@@ -19,17 +19,6 @@
 ## Umgebung
 Wir werden uns auf virtuellen Servern in Azure aufhalten. Der Grund für dieses Vorgehen ist die Vereinfachung von Zugriffen auf die benötigen Ressourcen und Tools, ohne dass wir uns um ProxyServer, Firewalls und ähnliches kümmern müssen. 
 
-Eure persönlichen VMs:
-- Hollinger Patrick / hollingerp = 168.63.104.27
-- Corpataux Michel / corpatauxmi = 13.95.231.128
-- Kilchoer Bertrand / kilchoerb = 137.116.196.13
-- Maurer Dominic / maurerdom = 168.63.104.65
-- Mueller-Schäublin Harald / muellerschah = 168.63.108.209
-- Rietmann Selina / rietmanns = 13.93.93.155
-- Schwer Christoph / schwerc = 65.52.129.102
-- Steiner Manfred / steinerman = 104.47.138.135
-- Stocker Renato / stockerr = 65.52.129.240
-- Siegenthaler Daniel / siegenthalda =  65.52.137.240
 
 ## Links zu den verschiedenen Themen
 

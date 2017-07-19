@@ -14,7 +14,17 @@ Set-ExecutionPolicy Unrestricted -Force
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 #Installieren vscode, chrome, git mit Chocolatey
+choco install visualstudiocode git -y
+
+#Wer will kann noch Google Chrome installieren
 choco install visualstudiocode git googlechrome -y
+
+#Sobald Git installiert ist 
+new-item -path "C:\Temp" -ItemType Directory
+Set-Location -Path "C:\Temp"
+
+#Git Repo downloaden
+git clone https://github.com/Outek/Schulung
 
 #Visual Studio Code öffnen
 #Powershell Extension installieren, reload drücken für Reload zum Aktivieren der Extension
